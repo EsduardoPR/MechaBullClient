@@ -16,8 +16,12 @@ export function SectionRegister(){
         </>
     )
     return(
-        <section>
-            register
+        <section className="Section-Register">
+            <ContentAllAuths 
+                className={"Register"}
+                title={"Registro"} 
+                content={content}/>
+                <div>hola</div>
         </section>
     )
 }
