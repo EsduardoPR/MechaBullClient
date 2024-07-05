@@ -6,12 +6,10 @@
     align-items: center;
     justify-content: center;
 }
-.div-content .div-back{
+.div-back{
     position: absolute;
     width: 50%;
     height: 520px;
-    background-color: #0D427425;
-    transform: rotate(3deg);
     border-radius: 8px;
     z-index: 1;
 }
