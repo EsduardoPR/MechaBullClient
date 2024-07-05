@@ -57,7 +57,7 @@ function Navigation(){
         <Link to='/'>landing</Link>
       </li>
       <li>
-        <Link to='/registro'>landing</Link>
+        <Link to='/registro'>registro</Link>
       </li>
 
       <li>
