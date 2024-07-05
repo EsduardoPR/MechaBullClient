@@ -21,6 +21,7 @@ export function SectionRegister(){
                 className={"Register"}
                 title={"Registro"} 
                 content={content}/>
+                <div>hola</div>
         </section>
     )
 }
