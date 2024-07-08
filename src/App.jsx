@@ -1,10 +1,17 @@
-import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+
+
+import { BrowserRouter, Router, Routes, Route, Link } from 'react-router-dom'
 import { ProtectedRoutes } from './components/ProtectedRoutes'
 import { Login } from './pages/login'
 import { Inicio } from './pages/Inicio'
 import { Dash } from './pages/dash'
 import { useState } from 'react'
 import { Register } from './pages/register'
+import { RecuperarContraseña } from './pages/recuperarContraseña'
+import { CambiarContraseña } from './pages/cambiarContraseña'
+import { BusquedaContraseña } from './pages/busquedaContraseña'
+
+
 function App() {
   const [user, setUser] = useState(null);
 
@@ -34,6 +41,9 @@ function App() {
         // ! existe 
         // !! no existe - son abreviaciones
         <Route path='/registro' element={<Register/>}/>
+        <Route path='/recuperacion-contraseña' element={<RecuperarContraseña/>}/>
+        <Route path='/cambiar-contraseña' element={<CambiarContraseña/>}/>
+        <Route path='/busqueda-contraseña' element={<BusquedaContraseña/>}/>
         <Route element={<ProtectedRoutes isAllowed={!!user}/>}>
           <Route path='/inicio' element={<Inicio/>}/>
         </Route>
@@ -58,6 +68,15 @@ function Navigation(){
       </li>
       <li>
         <Link to='/registro'>registro</Link>
+      </li>
+      <li>
+        <Link to='/recuperacion-contraseña'>Recuperar Contraseña</Link>
+      </li>
+      <li>
+        <Link to='/cambiar-contraseña'>Cambiar contraseña</Link>
+      </li>
+      <li>
+        <Link to='/busqueda-contraseña'>Busqueda de contraseña</Link>
       </li>
 
       <li>

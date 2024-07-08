@@ -1,0 +1,59 @@
+.SectionBusquedaContraseña{
+    width: 100%;
+    height: 100vh;
+    background: #EDEDED;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.BusquedaContraseña{
+    background-color: #0D427425;
+    transform: rotate(3deg);
+}
+.spiner{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 80px;
+    height: 80px;
+    border-top: 9px solid #105DA5;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.noencontrada{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 80px;
+    height: 80px;
+    border: 9px solid red;
+    border-radius: 50%;
+    
+}
+.noencontrada .l1, .l2{
+position: absolute;
+
+height: 9px;
+background-color: red;
+}
+.noencontrada .l1{
+    rotate: 45deg;
+    
+    animation:encon 0.5s linear forwards;     
+}
+.noencontrada .l2{
+    rotate: -45deg;
+    animation:encon 0.5s linear forwards;
+}
+
+@keyframes encon {
+    0%{width: 0px;}
+    80%{width: 70px;}
+    100%{width: 60px;}
+}
