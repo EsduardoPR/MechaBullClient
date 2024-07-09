@@ -3,8 +3,9 @@ import { InputString } from "../../molecules/auths/inputString";
 import { InputPassword } from "../../molecules/auths/inputPassword";
 import { Button } from "../../molecules/auths/button";
 
-
 export function SectionRegister(){
+
+
     const content = (
         <>
             <InputString typeInput={"Nombre de usuario"} placeholder={"Lola123"}/>

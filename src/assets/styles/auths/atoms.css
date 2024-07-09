@@ -8,14 +8,14 @@
 }
 .div-back{
     position: absolute;
-    width: 50%;
-    height: 520px;
+    width: 450px;
+    height: 530px;
     border-radius: 8px;
     z-index: 1;
 }
 .div-content .div-front{
     position: absolute;
-    width: 50%;
+    width: 450px;
     height: auto;
     padding: 40px 0;
     padding-bottom: 60px;

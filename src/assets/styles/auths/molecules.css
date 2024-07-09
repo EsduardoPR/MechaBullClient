@@ -20,50 +20,155 @@
 }
 
 .input-string{
-    width:75%;
-    height: 90px;
+    width:80%;
+    height: 80px;
     font-family: "Open Sans", sans-serif;
-    padding: 0 10px ;
+    display: flex;
     flex-direction: column;
-    justify-content: center;   
-    top: -10px;
+    align-items: center;
+    justify-content: center;    
 }
-.input-string p{
+.input-string-passwd .content-titles-passwd,
+.input-string .content-titles{
+    width: 100%;
+    height: 75px;
+    text-align: left;
+    display: flex;
+}
+.content-titles p{
     position: relative;
     font-size: 16px;
     font-weight: 500;
     color: black;
     z-index: 2;
     background:rgb(255, 255, 255);
-    padding: 0 7px;
-    display: inline-block;
-    top: 13%;
-    left: 5%;
+    width: auto;
+    height: 20px;
+    padding: 0 2px;
+    display: flex;
+    align-items: center;
+    left: 7%;
+    top: -7%;
 }
 .input-string input{
     position: relative;
     font-size: 20px;
-    top: -15%;
-    width: 92%;
-    height: 55px;
+    width: 87%;
+    margin-top: -15%;
+    height: 50px;
     border-radius: 4px;
-    border: 1px #105DA550 solid;
+    border: 1.5px #105DA550 solid;
     background: white;
-    padding: 0 15px;
+    padding: 0 10px;
     z-index: 1;
 
     transition: 1s;
 }
-.input-string input:focus {
+.input-string .inputs-auth:focus {
     outline: none;
-    border-color: #105DA5;
+    border: 1px solid #105DA5;
+    transition: 1s;
+}
+.input-string .error{
+    transition: 1s;
+    border: 1.5px solid #f44336;
+}
+.error.inputs-auth:focus{
+    border-color: #ff6347;
 }
 
-.input-string .eye-icon{
+.input-string-passwd{
+    margin-top: -10px;
+    width:87%;
+    height: 100px;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+.content-titles-passwd p{
     position: relative;
-    top: -55%;
-    left: 90%;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
     z-index: 2;
-    font-size: 20px;
+    background:rgb(255, 255, 255);
+    width: auto;
+    height: 20px;
+    padding: 0 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 11%;
+    top: -23%;
 }
 
+.input-string-passwd input{
+    position: relative;
+    font-size: 20px;
+    width: 80%;
+    margin-top: -10%;
+    height: 100px;
+    border-radius: 4px;
+    border: 1.5px #105DA550 solid;
+    background: white;
+    padding-left: 10px;
+    padding-right: 2%;
+    z-index: 1;
+
+    transition: 1s;
+}
+.input-string-passwd .eye-icon{
+    cursor: pointer;
+    position: relative;
+    top: -42%;
+    left: 35%;
+    z-index: 2;
+    font-size: 50px;
+}
+
+.input-string-passwd .passwd-auth:focus {
+    outline: none;
+    border: 1px solid #105DA5;
+    transition: 1s;
+}
+.input-string-passwd .error{
+    transition: 1s;
+    border: 1.5px solid #f44336;
+}
+.error.passwd-auth:focus{
+    border-color: #ff6347;
+}
+.errors-input{
+    width:75%;
+    opacity: 1;
+    max-height: 0;
+    overflow: hidden;
+    color: hsl(4, 90%, 58%);
+    margin-top: 2px;
+    margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+}
+.errors-passwd{
+    text-align: center;
+    width:75%;
+    opacity: 1;
+    max-height: 0;
+    overflow: hidden;
+    color: hsl(4, 90%, 58%);
+    margin-top: -20px;
+    margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+}
+.errors-passwd.visible,
+.errors-input.visible {
+    max-height: 100px;
+    opacity: 1;
+}

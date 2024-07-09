@@ -1,8 +1,9 @@
 import { Navigate, Outlet } from "react-router-dom"
 
-export function ProtectedRoutes({isAllowed, children, redirectTo='/'}){
-    if(!isAllowed){
+export function ProtectedRoutes({children, redirectTo='/'}){
+    let isAuth = localStorage.getItem('token');
+    if(!isAuth){
         return <Navigate to={redirectTo}/>
     }
-    return children ? children : <Outlet/>
+    return <Outlet/>
 }
