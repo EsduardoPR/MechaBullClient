@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { IonIcon } from '@ionic/react';
 import { eyeOutline, eyeOffOutline } from 'ionicons/icons';
 
-export function InputPassword({typePassword, value, onChange, className, name}){
+export function InputPassword({typePassword, onKeyDown, value, onChange, className, name}){
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -18,6 +18,7 @@ export function InputPassword({typePassword, value, onChange, className, name}){
                 type={showPassword ? 'text' : 'password'}
                 placeholder="******" 
                 value={value} 
+                onKeyDown={onKeyDown}
                 name={name}
                 onChange={onChange}/>
              <IonIcon

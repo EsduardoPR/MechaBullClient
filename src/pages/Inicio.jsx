@@ -5,15 +5,18 @@ import { useNavigate } from 'react-router-dom';
 import { useWebSocket } from '../components/services/userContext';
 import { startGaming } from '../components/services/websocketActions';
 
+
 export function Inicio() {
+    const { ws } = useWebSocket();
     const navigate = useNavigate()
     const logout = () => {
-        window.localStorage.removeItem('token');
-        navigate('/')
+        const closeReason = 'clientClose';
+        ws.close(4000, closeReason);
+        setTimeout(() =>{
+            navigate('/')
+        }, 100)
     };
-
-
-    const { ws } = useWebSocket();
+    
 
     const handleStartGaming = () => {
         startGaming(ws);

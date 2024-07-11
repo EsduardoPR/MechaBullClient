@@ -63,6 +63,12 @@ export function SectionLogin(){
         }
     };
 
+    const handleKeyDown = (event) =>{
+        if (event.key === 'Enter') {
+            send();
+        }
+    }
+
     const send = async () => {
         if (!username || !password) {
             alert('Por favor, corrige los errores antes de enviar.');
@@ -73,7 +79,7 @@ export function SectionLogin(){
                     password
                 });
                 window.localStorage.setItem('token', response.data.token)
-                establishWebSocketConnection(response.data.token);
+                establishWebSocketConnection();
                 setTimeout(() =>{
                     navigate('/inicio')
                 }, 100)
@@ -99,6 +105,7 @@ export function SectionLogin(){
                 value={username}
                 name="username"
                 placeholder={"Juan123"}
+                onKeyDown={handleKeyDown}
                 onChange={handleLoginChange}/>
             <Messages msg={msg} className={`errors-input ${error ? 'visible' : ''}`} />
             <InputPassword 
@@ -106,6 +113,7 @@ export function SectionLogin(){
                 classNameP={`${passwordError ? 'visible' : ''}`}
                 typePassword={"Contraseña"}
                 value={password}
+                onKeyDown={handleKeyDown}
                 name="password"
                 onChange={handleLoginChange}/>
             <Messages msg={msgReq} className={`errors-passwd ${errorReq ? 'visible' : ''}`} />
