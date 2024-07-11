@@ -10,13 +10,22 @@ import { useWebSocket } from "../../services/userContext";
 export function SectionLogin(){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [nicknameError, setNicknameError] = useState(false);
-    const [passwordError, setPasswordError] = useState(false)
-    const [error, setError] = useState(false);
-    const [errorReq, setErrorReq] = useState(false);
-    const [msg, setMsg] = useState('')
-    const [msgReq, setMsgReq] = useState('')
 
+    const [errorUsernameMsg, setErrorUsernameMsg] = useState(false);
+    const [checkUsername, setCheckUsername] = useState(false);
+
+    let msgUsername = 'El nombre de usuario no debe contener espacios o mas de 20 caracteres';
+    let msgReq = 'usuario o contraseña incorrectos'
+
+    const [usernameErrorCss, setUsernameErrorCss] = useState(false)
+    const [passwordErrorCss, setPasswordErrorCss] = useState(false)
+
+
+
+
+    const [errorReq, setErrorReq] = useState(false);
+
+    
 
     const navigate = useNavigate();
     const { establishWebSocketConnection } = useWebSocket();
@@ -36,26 +45,17 @@ export function SectionLogin(){
     const handleLoginChange = (event) => {
         const { name, value } = event.target;
         setErrorReq(false)
-        setPasswordError(false)
+        setUsernameErrorCss(false)
+        setPasswordErrorCss(false)
         if (name === 'username') {
-            if (/\s/.test(value)) {
-                setError(true);
-                setNicknameError(true)
-                setMsg("El nombre de usuario no debe contener espacios");
+            if(/\s/.test(value) || value.length >= 20){
+                setErrorUsernameMsg(true);
+                setUsernameErrorCss(true)
+                setCheckUsername(true)
             } else {
-                setError(false)
-                setNicknameError(false);
-            }
-            if(value.length >= 20) {
-                setError(true)
-                setMsg("El nombre de usuario supero los 20 caracteres")
-            } 
-            if(/\s/.test(value) && value.length >= 20){
-                setError(true);
-                setNicknameError(true)
-                setMsg("El nombre de usuario no debe contener espacios y mas de 20 caracteres");
-            } else{
-                setNicknameError(false)
+                setErrorUsernameMsg(false)
+                setUsernameErrorCss(false)
+                setCheckUsername(false)
             }
             setUsername(value);
         } else if (name === 'password') {
@@ -70,7 +70,7 @@ export function SectionLogin(){
     }
 
     const send = async () => {
-        if (!username || !password) {
+        if (!username || !password || checkUsername) {
             alert('Por favor, corrige los errores antes de enviar.');
         } else {
             try {
@@ -86,9 +86,8 @@ export function SectionLogin(){
             } catch (error) {
                 if (error.response && error.response.data && error.response.data.message) {
                     setErrorReq(true)
-                    setMsgReq("usuario o contraseña incorrectos");
-                    setNicknameError(true)
-                    setPasswordError(true)
+                    setUsernameErrorCss(true)
+                    setPasswordErrorCss(true)
                 } else {
                     setError('Error desconocido al intentar iniciar sesión');
                 }
@@ -99,24 +98,22 @@ export function SectionLogin(){
     const renderContent = (
         <>
             <InputString 
-                className={`${nicknameError ? 'error error:focus' : ''}`}
-                classNameP={`${nicknameError ? 'visible' : ''}`}
+                className={`${usernameErrorCss ? 'error error:focus' : ''}`}
                 typeInput={"Nombre de usuario"}
                 value={username}
                 name="username"
                 placeholder={"Juan123"}
                 onKeyDown={handleKeyDown}
                 onChange={handleLoginChange}/>
-            <Messages msg={msg} className={`errors-input ${error ? 'visible' : ''}`} />
+            <Messages msg={msgUsername} className={`errors-input ${errorUsernameMsg ? 'visible' : ''}`} />
             <InputPassword 
-                className={`${passwordError ? 'error error:focus' : ''}`}
-                classNameP={`${passwordError ? 'visible' : ''}`}
+                className={`${passwordErrorCss ? 'error error:focus' : ''}`}
                 typePassword={"Contraseña"}
                 value={password}
                 onKeyDown={handleKeyDown}
                 name="password"
                 onChange={handleLoginChange}/>
-            <Messages msg={msgReq} className={`errors-passwd ${errorReq ? 'visible' : ''}`} />
+            <Messages msg={msgReq} className={`errors-req ${errorReq ? 'visible' : ''}`} />
             <div className="redirections">
                 <div className="sin-cuenta">
                     <p>Sin cuenta?, &nbsp;</p>

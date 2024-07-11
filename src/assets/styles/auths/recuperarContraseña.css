@@ -1,0 +1,13 @@
+.sectionRecuperarContraseña{
+    width: 100%;
+    height: 100vh;
+    background: #EDEDED;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.recuperarContraseña{
+    background-color: #F4433625;
+    transform: rotate(-3deg);
+}

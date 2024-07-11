@@ -9,6 +9,7 @@
 }
 
 .redirections{
+    margin-top: 3%;
     margin-left: 8px;
     width: 76%;
     display: flex;
@@ -36,9 +37,17 @@
 
     color: #36AFC9;
 }
+.enlace-registro:hover,
+.enlace-recuperacion:hover{
+    color: #3693c9;
+}
+.enlace-registro:active,
+.enlace-recuperacion:active{
+    color: #105DA5;
+}
 
 .buttonT{
-    margin-top: 4%;
+    margin-top: 0%;
     background:#105DA5;
     color: white;
     width: 76%;
@@ -52,5 +61,8 @@
 }
 .buttonT:hover{
     background:#0b4377;
+}
+.buttonT:active{
+    background:#3b92e4;
 }
 

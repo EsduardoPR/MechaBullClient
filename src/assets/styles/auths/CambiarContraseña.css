@@ -1,8 +1,4 @@
-.register{
-    background-color: #0D427425;
-    transform: rotate(3deg);
-}
-.Section-Register{
+.sectionCambiarContraseña{
     width: 100%;
     height: 100vh;
     background: #EDEDED;
@@ -10,4 +6,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.CambiarContraseña{
+    background-color: #0D427425;
+    transform: rotate(3deg);
 }

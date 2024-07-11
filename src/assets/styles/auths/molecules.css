@@ -1,27 +1,26 @@
 .up-content{
     width: 100%;
-    height: 180px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: -13%;
 }
 .up-content h2{
+    margin-top: 2%;
+    width: 80%;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: 33px;
+    font-size: 28px;
     color: #105DA5;
-    margin-bottom: -20px;
+    text-align: center;
 }
 .up-content img{
     width: 86px;
-    margin-bottom: -30px;
 }
 
 .input-string{
     width:80%;
-    height: 80px;
+    height: 60px;
     font-family: "Open Sans", sans-serif;
     display: flex;
     flex-direction: column;
@@ -34,6 +33,7 @@
     height: 75px;
     text-align: left;
     display: flex;
+    margin-top: -5%;
 }
 .content-titles p{
     position: relative;
@@ -64,23 +64,24 @@
 
     transition: 1s;
 }
-.input-string .inputs-auth:focus {
+
+.inputs-auth:focus {
     outline: none;
-    border: 1px solid #105DA5;
+    border: 1.5px solid #105DA5;
     transition: 1s;
 }
 .input-string .error{
     transition: 1s;
     border: 1.5px solid #f44336;
+
 }
 .error.inputs-auth:focus{
-    border-color: #ff6347;
+    border: 1.5px solid #f44336;
 }
 
 .input-string-passwd{
-    margin-top: -10px;
     width:87%;
-    height: 100px;
+    height: 60px;
     font-family: "Open Sans", sans-serif;
     display: flex;
     flex-direction: column;
@@ -101,14 +102,14 @@
     align-items: center;
     justify-content: center;
     left: 11%;
-    top: -23%;
 }
 
 .input-string-passwd input{
+    top: -5%;
+    margin-top: -6.5%;
     position: relative;
     font-size: 20px;
     width: 80%;
-    margin-top: -10%;
     height: 100px;
     border-radius: 4px;
     border: 1.5px #105DA550 solid;
@@ -121,11 +122,11 @@
 }
 .input-string-passwd .eye-icon{
     cursor: pointer;
-    position: relative;
-    top: -42%;
-    left: 35%;
+    position: absolute;
     z-index: 2;
-    font-size: 50px;
+    font-size: 25px;
+    margin-top: 0%;
+    margin-left: 60%;
 }
 
 .input-string-passwd .passwd-auth:focus {
@@ -154,13 +155,26 @@
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
 }
 .errors-passwd{
+    width:75%;
+    opacity: 1;
+    max-height: 0;
+    overflow: hidden;
+    color: hsl(4, 90%, 58%);
+    margin-top: 2px;
+    margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+}
+.errors-req{
     text-align: center;
     width:75%;
     opacity: 1;
     max-height: 0;
     overflow: hidden;
     color: hsl(4, 90%, 58%);
-    margin-top: -20px;
+    margin-top: 2px;
     margin-bottom: 10px;
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
@@ -168,6 +182,7 @@
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
 }
 .errors-passwd.visible,
+.errors-req.visible,
 .errors-input.visible {
     max-height: 100px;
     opacity: 1;
