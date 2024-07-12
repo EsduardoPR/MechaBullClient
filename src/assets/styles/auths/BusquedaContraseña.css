@@ -30,30 +30,82 @@
     justify-content: center;
     margin-top: 70px;
     margin-bottom: 70px;
-    width: 80px;
-    height: 80px;
-    border: 9px solid red;
+    width: 40px;
+    height: 40px;
+    border: 7px solid red;
     border-radius: 50%;
     
 }
 .noencontrada .l1, .l2{
 position: absolute;
 
-height: 9px;
+height: 7px;
 background-color: red;
 }
 .noencontrada .l1{
     rotate: 45deg;
     
-    animation:encon 0.5s linear forwards;     
+    animation:encon 1s linear forwards;     
 }
 .noencontrada .l2{
     rotate: -45deg;
-    animation:encon 0.5s linear forwards;
+    animation:encon 1s linear forwards;
+    background-color: red;
+    height: 7px;
 }
 
 @keyframes encon {
     0%{width: 0px;}
-    80%{width: 70px;}
-    100%{width: 60px;}
+    80%{width: 40px;}
+    100%{width: 30px;}
 }
+
+.encontrada{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        width: 80px;
+        height: 80px;
+        rotate: 45deg;
+        border: 9px solid green;
+        border-radius: 50%;
+        
+   
+}
+.encontrada .l1, .l2{
+    position: absolute;
+    height: 9px;
+    background-color: green;
+    }
+    .encontrada .l1{
+        
+       
+        
+        margin-right: 30px;
+        margin-top: 52px;
+        animation:encon2 2s linear forwards;
+             
+    }
+    .encontrada .l2{
+      
+        rotate: 90deg;
+        animation:encon3 0.5s linear forwards;
+       
+    }
+
+    @keyframes encon2{
+        0% {width: 0px;}
+        50%{width: 30px;}
+        100%{width: 30px;}
+        
+
+    }
+    @keyframes encon3{
+        0% {width: 0px;}
+        50%{width: 0px;}
+        100%{width: 60px;}
+        
+
+    }

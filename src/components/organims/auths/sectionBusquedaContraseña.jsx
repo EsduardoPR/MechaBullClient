@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../../molecules/auths/button";
 import ContentAllAuths from "../../atoms/auths/contentAllAuths";
-import RadioButtonGroup from "../../molecules/RadioButtonGroup";
+
 
 function Animacion (){
     
@@ -20,7 +20,7 @@ export function SectionBusquedaContraseña(){
                 
                 
                 <Button  className="buttonT"  typeButton={"Enviar"}/>
-                <RadioButtonGroup/>
+              
 
                 
                 

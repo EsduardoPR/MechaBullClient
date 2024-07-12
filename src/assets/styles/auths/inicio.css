@@ -1,0 +1,84 @@
+.inicio{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    
+}
+.table-container {
+    width: 100%;
+    height: 80vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.table{
+    width: 80%;
+    height: 80%;
+    
+
+    border-bottom: 1px solid black;
+}
+
+.Header-Lista{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Fija el ancho de las columnas */
+  }
+  
+  th, td {
+    text-align: center; /* Centra el texto */
+    padding: 12px;
+    max-width: 20%; /* Limita el ancho máximo de los td */
+    word-wrap: break-word; /* Permite que el texto se ajuste */
+  }
+  
+  th {
+    background-color: #f1f1f1;
+    color: #105DA5;
+    font-size: 22px;
+  }
+  tr{
+    height: 90px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  td{
+    font-size: 22px;
+  }
+  
+ 
+  .scroll-tbody {
+    
+  
+    width: auto;
+    max-height: 450px; /* Ajusta esta altura según tus necesidades */
+    overflow: scroll; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+     
+    
+}
+
+.scroll-tbody::-webkit-scrollbar {
+    display: none; 
+}
+
