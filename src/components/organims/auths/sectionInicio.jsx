@@ -66,10 +66,9 @@ export function SectionInicio(){
 
       
       </div>  
-       <dir> <h1>Footer</h1></dir>
+      <dir> <h1>Footer</h1></dir>
        
-       </section>
-
+    </section>
     )
 }
 
