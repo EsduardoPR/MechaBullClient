@@ -1,6 +1,7 @@
-
+import { Header } from '../../molecules/home/header'
 
 import '../../../assets/styles/home/inicio.css'
+
 export function SectionInicio(){
     const bovinos = [
         { id: 1, nombre: 'Juan adnbasvdvahsgvadvahsgv', siniga: '1223-ERR', edad: 12, lpm: '12/m', promedioPasos: '120 p' },

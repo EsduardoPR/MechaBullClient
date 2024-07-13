@@ -7,7 +7,7 @@ import BullPlusOff from '../../../assets/img/BullPlusOff.png';
 import config from '../../../assets/img/config.png'
 import lupa from '../../../assets/img/lupa.png'
 
-import { Modal } from "../../atoms/home/modal";
+import { ModalS } from "../../atoms/home/modal";
 
 <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet"></link>;
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet"></link>;
@@ -40,7 +40,7 @@ export function Header({name}){
                                 </button>
                             </div>
                         </div>
-                        <Modal/>
+                        <ModalS/>
                         <a href="">
                             <img className='Config' src={config}/>
                         </a>
