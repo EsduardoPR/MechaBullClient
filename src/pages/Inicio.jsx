@@ -1,5 +1,4 @@
-// Inicio.jsx
-import React from 'react';
+/*import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { useWebSocket } from '../components/services/userContext';
@@ -30,4 +29,10 @@ export function Inicio() {
             <button onClick={handleStartGaming}>evento de ejemplo</button>
         </div>
     );
+}*/
+import { SectionInicio } from "../components/organims/home/sectionInicio"
+export function Inicio(){
+    return(
+        <SectionInicio/>
+    )
 }
