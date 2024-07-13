@@ -14,16 +14,7 @@ export function SectionBusquedaContraseña(){
                 <div className="noencontrada">
                     <div className="l1"></div>
                     <div className="l2"></div>
-
-                </div>
-
-                
-                
-                <Button  className="buttonT"  typeButton={"Enviar"}/>
-                <RadioButtonGroup/>
-
-                
-                
+                </div>                
             </>
         )
     return(

@@ -1,12 +1,14 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react'
+
+//esqueleto
 import React, {Suspense, lazy} from 'react';
 
 import { ProtectedRoutes } from './components/ProtectedRoutes';
 import { Login } from './pages/login';
 import { Register } from './pages/register';
 import { RecuperarContraseña } from './pages/recuperarContraseña'
-import { CambiarContraseña } from './pages/cambiarContraseña'
+import { CambiarContraseña } from './pages/nuevaContraseña'
 import { BusquedaContraseña } from './pages/busquedaContraseña'
 
 
@@ -17,6 +19,7 @@ import { Dash } from './pages/dash';
 
 import { WebSocketProvider } from './components/services/userContext';
 import './assets/styles/globales.css'
+import { ErrorFromRecoveryPasswd } from './pages/errorFromRecoveryPasswd';
 
 
 
@@ -26,9 +29,10 @@ function App() {
       <WebSocketProvider>
         <Routes>
           <Route path='/' element={<Login />} />
-          <Route path='/registro' element={<Register />} />
-          <Route path='/recuperacion-contraseña' element={<RecuperarContraseña/>}/>
-          <Route path='/cambiar-contraseña' element={<CambiarContraseña/>}/>
+          <Route path='/reg' element={<Register />} />
+          <Route path='/pros-rec-contra' element={<RecuperarContraseña/>}/>
+          <Route path='/error-rec-pass' element={<ErrorFromRecoveryPasswd/>}/>
+          <Route path='/new-contra' element={<CambiarContraseña/>}/>
           <Route path='/busqueda-contraseña' element={<BusquedaContraseña/>}/>
           
 

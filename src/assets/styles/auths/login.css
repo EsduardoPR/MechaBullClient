@@ -19,10 +19,6 @@
     font-size: 13px;
     font-family: "Open Sans", sans-serif;
 }
-.login{
-    background-color: #0D427425;
-    transform: rotate(3deg);
-}
 .sin-cuenta{
     display: flex;
     align-items: center;

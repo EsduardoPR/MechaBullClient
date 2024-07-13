@@ -7,10 +7,6 @@
     align-items: center;
     justify-content: center;
 }
-.register{
-    background-color: #38B7D235;
-    transform: rotate(-3deg);
-}
 .button-recup{
     margin-top: 2%;
     background:#105DA5;

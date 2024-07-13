@@ -22,7 +22,7 @@ export function SectionRegister(){
     //const [msg, setMsg] = useState('')
     let msgUsername = 'El nombre de usuario no debe contener espacios o mas de 20 caracteres'
     let msgID = 'El ID no debe contener espacios y minusculas'
-    let msgPasswd = 'Debe tener más de 5 caracteres y contener al menos una letra mayúscula y un número.'
+    let msgPasswd = 'La contraseña debe tener al menos 6 caracteres, incluir al menos una letra mayúscula y un número. Solo se permiten letras y números.'
     let msgConfirPasswd = 'La contraseña no es correcta'
     let msgGmail = 'Ingresa un correo valido'
 
@@ -150,7 +150,7 @@ export function SectionRegister(){
             <InputString 
                 className={`${errorUsernameCss ? 'error error:focus' : ''}`}
                 typeInput={"Nombre de usuario"} 
-                placeholder={"Lola123"}
+                placeholder={"user123"}
                 value={username}
                 name="username"
                 onKeyDown={handleKeyDown}

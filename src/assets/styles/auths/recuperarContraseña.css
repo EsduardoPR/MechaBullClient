@@ -7,7 +7,84 @@
     align-items: center;
     justify-content: center;
 }
-.recuperarContraseña{
-    background-color: #F4433625;
-    transform: rotate(-3deg);
+
+.buttonT{
+    margin-top: 0%;
+    background:#105DA5;
+    color: white;
+    width: 76%;
+    font-size: 24px;
+    padding: 12px;
+    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .6s;
+}
+.buttonT:hover{
+    background:#0b4377;
+}
+.buttonT:active{
+    background:#3b92e4;
+}
+
+
+.sectionRecuperarContraseña .content-information{
+    opacity: 0;
+    background-color: #f8f8f8;
+    font-weight: 400;
+    width:500px;
+    position: absolute;
+    font-family: "Open Sans", sans-serif;
+    padding: 30px 0;
+    box-shadow: 0px 4px 100px 3px rgba(0, 0, 0, 0.10);
+    z-index: 0;
+    margin-top: 0%;
+    padding-bottom: 60px;
+    transform: scale(.8);
+    transition: transform .3s ease, opacity .3s ease;
+}
+.content-information.active{
+    transform:  scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+
+.content-information
+.content-information h2{
+    font-weight: 500;
+}
+.content-information h5{
+    font-family: "Open Sans", sans-serif;
+    font-weight:600;
+    margin-top: -5%;
+}
+.content-information .information{
+    width: 80%;
+    text-align: center;
+}
+.content-information h3{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    margin-top: 0%;
+    padding-bottom: 20px;
+}
+.button-pop-ok-email-sender{
+    background:#1f7ed6;
+    color: white;
+    width: 70%;
+    font-size: 20px;
+    padding: 12px;
+    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .6s;
+}
+.button-pop-ok-email-sender:hover{
+    background:#0e5496;
+}
+.button-pop-ok-email-sender:active{
+    background:#3b92e4;
 }

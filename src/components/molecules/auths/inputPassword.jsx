@@ -16,7 +16,6 @@ export function InputPassword({typePassword, onKeyDown, value, onChange, classNa
             <input
                 className={`passwd-auth ${className}`}
                 type={showPassword ? 'text' : 'password'}
-                placeholder="******" 
                 value={value} 
                 onKeyDown={onKeyDown}
                 name={name}

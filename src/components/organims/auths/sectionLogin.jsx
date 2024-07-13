@@ -102,7 +102,7 @@ export function SectionLogin(){
                 typeInput={"Nombre de usuario"}
                 value={username}
                 name="username"
-                placeholder={"Juan123"}
+                placeholder={""}
                 onKeyDown={handleKeyDown}
                 onChange={handleLoginChange}/>
             <Messages msg={msgUsername} className={`errors-input ${errorUsernameMsg ? 'visible' : ''}`} />
@@ -117,9 +117,9 @@ export function SectionLogin(){
             <div className="redirections">
                 <div className="sin-cuenta">
                     <p>Sin cuenta?, &nbsp;</p>
-                    <Link className="enlace-registro" to='/registro'>registrate</Link>
+                    <Link className="enlace-registro" to='/reg'>registrate</Link>
                 </div>
-                <Link className="enlace-recuperacion" to='/recuperacion-contraseña'>Olvidaste tu contraseña?</Link>  
+                <Link className="enlace-recuperacion" to='/pros-rec-contra'>Olvidaste tu contraseña?</Link>  
             </div>  
             <Button onClick={send} className="buttonT" typeButton={"Entrar"}/>
         </>
