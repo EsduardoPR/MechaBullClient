@@ -22,6 +22,7 @@ import './assets/styles/globales.css'
 import { ErrorFromRecoveryPasswd } from './pages/errorFromRecoveryPasswd';
 
 import { Bovino } from './pages/bovino.jsx';
+import { Configuracion } from './pages/configuracion.jsx';
 
 
 
@@ -39,7 +40,7 @@ function App() {
           <Route path='/inicio' element={<Inicio/>}/>
 
           <Route path='/bovino' element={<Bovino/>}/>
-          
+          <Route path='/Config' element={<Configuracion/>}/>
 
           <Route element={<ProtectedRoutes/>}>
             <Route path='/inicio' element={<Inicio/>}/>

@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+.section-configuracion{
+    width: 100%;
+    height: 100vh;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.Perfil{
+    height: 350PX;
+    width: 400PX;
+    
+   margin-top: 50px;
+   margin-left: 30px;
+   margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.Perfil p{
+    
+    font-family: 'Tajawal', sans-serif;
+}
+
+.nombre-perfil{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 32px;
+}
+.user-perfil{
+    font-size: 24px;
+    font-weight: 400;
+    color: #A6A6A6;
+}
+
+.editar-perfil{
+    height: 350PX;
+    width: 900PX;
+    margin-top: 50px;
+   margin-left: 30px;
+   margin-right: 30px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Title-ep{
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.input-perfil{
+    width: 100%;
+    margin-right: 20px;
+}
+
+.input-perfil input{
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+
+    border-color: #105DA5;
+    color: #105DA5;
+    border: solid 1px;
+    
+}
+
+
+.miembros{
+    height: 350PX;
+    width: 400PX;
+    
+   margin-top: 50px;
+   margin-left: 30px;
+   margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.Scrol {
+    height: 100vh; 
+    width: 100%;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+.Scrol::-webkit-scrollbar {
+    display: none;  
+}
+.title-miembros{
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .profile-status {
+    font-size: 14px;
+    color: grey;
+    margin: 0;
+  }
+  
