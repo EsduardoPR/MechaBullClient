@@ -1,0 +1,126 @@
+.section-inicio{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Tajawal", sans-serif;
+  font-style: normal;
+  background-color: #dadada;
+}
+.table-container {
+  margin-top: 1%;
+  background-color: #FFFFFF;
+  width: 70%;
+  height: 78vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+  
+.table{
+  width: 100%;
+  height: 80vh;
+
+}
+.header-lista{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+.header-lista h1{
+  font-weight: 400;
+  font-size: 30px;
+}
+.title-lista{
+  font-weight: 500;
+  font-size: 15px;
+}
+.title-lista p{
+ 
+  margin-left: 15%;
+  color: #535353;
+}
+.button-inicio-añadir{
+  background:#36AFC9;
+  color: white;
+  width: 130px;
+  font-size: 20px;
+  padding: 8px;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.10);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .6s;
+}
+.button-inicio-añadir:hover{
+  background:#2795ad;
+}
+.button-inicio-añadir:active{
+  background:#58d2ee;
+}
+
+.content-table{
+  height: 68vh;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+.content-table::-webkit-scrollbar{
+  width: 3px;  
+}
+.content-table::-webkit-scrollbar-thumb{
+  background-color: #00000050;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.content-table thead {
+  background-color: #FFFFFF;
+  border-bottom: .5px solid #c4c4c4;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+table tr{
+  height: 90px;
+  
+}
+table tr th{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  border-bottom: .5px solid #c4c4c4;
+  color: #105DA5;
+  font-size: 27px;
+}
+.scroll-tbody { 
+  width: auto;
+  max-height: 450px;
+  overflow: scroll; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+.scroll-tbody td{
+  text-align: center;
+  padding: 12px;
+  max-width: 20%;
+  word-wrap: break-word;
+  font-size: 22px;
+  border-bottom: .5px solid #c4c4c4;
+}
+.content-table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.content-table tbody tr:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+

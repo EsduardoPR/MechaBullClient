@@ -1,0 +1,52 @@
+.foother{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    border-top: #00000050 .5px solid;
+    width: 100%;
+    height: 70px;
+margin-top: 40px;
+
+    font-family: "Open Sans", sans-serif;
+
+}
+.foother .foother-content-information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foother-title{
+    padding: 0 30px;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    
+}
+.title{
+    font-size: 20px;
+    color: #0D4274;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 350;
+    font-style: normal;
+    transition: .2s;
+}
+.foother-title,
+.foother-title:hover .title{
+    cursor: pointer;
+    color: #E3B076;
+}
+.foother-team{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+.foother-team .team{
+    color: #0D4274;
+    margin-right: 10px;
+}
+.foother-team .name-team{
+    color: #E3B076;
+    margin-left: 10px;
+}

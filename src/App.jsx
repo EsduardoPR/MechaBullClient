@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, Router } from 'react-router-dom';
 import { useState } from 'react'
 
 //esqueleto
@@ -14,13 +14,15 @@ import { BusquedaContraseña } from './pages/busquedaContraseña'
 
 import { Inicio } from './pages/Inicio'
 import { Dash } from './pages/dash';
+import { Settings } from './pages/settings';
+
 
 
 
 import { WebSocketProvider } from './components/services/userContext';
 import './assets/styles/globales.css'
 import { ErrorFromRecoveryPasswd } from './pages/errorFromRecoveryPasswd';
-
+import { NotFound } from './pages/notFound';
 
 
 function App() {
@@ -39,6 +41,7 @@ function App() {
           <Route element={<ProtectedRoutes/>}>
             <Route path='/inicio' element={<Inicio/>}/>
           </Route>
+          <Route path='/config' element={<Settings/>}/>
 
           <Route path='/dash' element={
             <ProtectedRoutes 
@@ -46,7 +49,7 @@ function App() {
                 <Dash />
             </ProtectedRoutes>
           } />
-
+          <Route path='/*' element={<NotFound/>}/>
           <Route path='+' element={<Navigate to='/'/>}/>
         </Routes>
       </WebSocketProvider>

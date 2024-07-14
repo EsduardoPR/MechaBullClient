@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { UpContent } from "../../molecules/auths/upContent";
 import '../../../assets/styles/auths/atoms.css'
 

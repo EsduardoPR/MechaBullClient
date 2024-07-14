@@ -1,4 +1,6 @@
-import { Header } from '../../molecules/home/header'
+import { HeaderSuperior } from '../../molecules/home/headerSuperior'
+import { Foother } from '../../molecules/home/Foother';
+import { Button } from '../../molecules/home/button'
 
 import '../../../assets/styles/home/inicio.css'
 
@@ -10,33 +12,34 @@ export function SectionInicio(){
         { id: 1, nombre: 'Juan', siniga: '1223-ERR', edad: 12, lpm: '12/m', promedioPasos: '120 p' },
         { id: 1, nombre: 'Juan', siniga: '1223-ERR', edad: 12, lpm: '12/m', promedioPasos: '120 p' },
         { id: 1, nombre: 'Juan', siniga: '1223-ERR', edad: 12, lpm: '12/m', promedioPasos: '120 p' },
+        { id: 1, nombre: 'Juan', siniga: '1223-ERR', edad: 12, lpm: '12/m', promedioPasos: '120 p' },
+        { id: 1, nombre: 'Juan', siniga: '1223-ERR', edad: 12, lpm: '12/m', promedioPasos: '120 p' },
+        { id: 1, nombre: 'Juan', siniga: '1223-ERR', edad: 12, lpm: '12/m', promedioPasos: '120 p' },
     ];
 
-
+    const hola = () => {
+        console.log("hola")
+    }
     return(
-    <section className="inicio">
-        <div>
-            <Header name={"Inicio"}/>
-        </div>
-
+    <section className="section-inicio">
+        <HeaderSuperior name={"Inicio"}/>
         <div className="table-container">
             <div className="table">
-                <div className="Header-Lista">
-                    <div className="Title-Lista">
-                        <h1>lista Bovinos</h1>
+                <div className="header-lista">
+                    <div className="title-lista">
+                        <h1>Lista Bovinos</h1>
                         <p>Datos</p>
                     </div>
                     <div>
-                        <button>Añadir</button>
+                        <Button className={'button-inicio-añadir'} onClick={hola} typeButton={'Añadir'}/>
                     </div>
                 </div>
-                <div>
+                <div className='content-table'>
                     <table>
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
                                 <th>Siniga</th>
+                                <th>Nombre</th>
                                 <th>Edad</th>
                                 <th>Lpm</th>
                                 <th>Promedio de pasos</th>
@@ -45,12 +48,11 @@ export function SectionInicio(){
                         <tbody className="scroll-tbody">
                             {bovinos.map((bovino, index) => (
                                 <tr key={index}>
-                                <td>{bovino.id}</td>
-                                <td>{bovino.nombre}</td>
-                                <td>{bovino.siniga}</td>
-                                <td>{bovino.edad}</td>
-                                <td>{bovino.lpm}</td>
-                                <td>{bovino.promedioPasos}</td>
+                                    <td>{bovino.siniga}</td>
+                                    <td>{bovino.nombre}</td>
+                                    <td>{bovino.edad}</td>
+                                    <td>{bovino.lpm}</td>
+                                    <td>{bovino.promedioPasos}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -58,7 +60,7 @@ export function SectionInicio(){
                 </div>
             </div>
         </div>  
-        {/*<dir> <h1>Footer</h1></dir>*/}
+        <Foother/>
     </section>
     )
 }

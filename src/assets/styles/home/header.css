@@ -1,0 +1,190 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #00000050 .5px solid;
+    width: 100%;
+    height: 75px;
+}
+.header-title{
+    width: 200px;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+
+    padding: 0 60px;
+}
+.title{
+    font-size: 30px;
+    color: #0D4274;
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.logo{
+    height: 48px;
+}
+.headerConfig{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.content-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 0 15px;
+    padding-right: 50px;
+}
+
+.header-search{
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 20px;
+    height: 48px;
+    border-radius: 50px;
+    border: none;
+    background-color: #cfcfcf;
+    font-size: 20px;
+    border: none;
+    transition: .5s;
+}
+.header-search:focus{
+    outline: none;
+    background-color: #f1f1f1;
+}
+
+.input-icon {
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+}
+
+
+
+.container-BullPlus{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.name-buss{
+    font-size: 20px;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #A6A6A6;
+}
+.container-BullPlus div{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-BullPlus .bull-plus{
+    width: 35px;
+}
+.container-BullPlus,
+.container-BullPlus:hover .name-buss {
+    color: #E3B076;
+    cursor: pointer;
+}
+
+
+.header-config{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10px;
+    margin-right: 5px;
+
+}
+.header-config .config-icon{
+    color: #A6A6A6;
+    font-size: 22px;
+    margin-right: 5px;
+}
+.header-config .name-config{
+    font-size: 20px;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #A6A6A6;
+}
+.header-config,
+.header-config:hover .config-icon,
+.header-config:hover .name-config {
+    color: #E3B076;
+    cursor: pointer;
+}
+.header-config,
+.header-config:active .config-icon,
+.header-config:active .name-config {
+    color: #cc893c;
+    cursor: pointer;
+}
+
+
+
+.header-notifications{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 10px;
+}
+.push-notifications{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notifications-icon{
+    color:#A6A6A6;
+    font-size: 22px;
+    margin-right: 5px;
+}
+.name-notifications{
+    font-size: 20px;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: #A6A6A6;
+}
+.push-notifications,
+.push-notifications:hover .notifications-icon,
+.push-notifications:hover .name-notifications{
+    color: #E3B076;
+    cursor: pointer;
+}
+.push-notifications,
+.push-notifications:active .notifications-icon,
+.push-notifications:active .name-notifications{
+    color: #cc893c;
+    cursor: pointer;
+}
+.modal-notification {
+    position: absolute;
+    top: 12%;
+    left: 83%;
+    right: auto;
+    bottom: auto;
+    border: 1px solid #cccccc82;
+    background: #ffffff;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 1px 7px .5px rgba(0, 0, 0, 0.10);
+    z-index: 4;
+}
