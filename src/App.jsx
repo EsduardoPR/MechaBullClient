@@ -21,6 +21,8 @@ import { WebSocketProvider } from './components/services/userContext';
 import './assets/styles/globales.css'
 import { ErrorFromRecoveryPasswd } from './pages/errorFromRecoveryPasswd';
 
+import { Bovino } from './pages/bovino.jsx';
+
 
 
 function App() {
@@ -34,6 +36,9 @@ function App() {
           <Route path='/error-rec-pass' element={<ErrorFromRecoveryPasswd/>}/>
           <Route path='/new-contra' element={<CambiarContraseña/>}/>
           <Route path='/busqueda-contraseña' element={<BusquedaContraseña/>}/>
+          <Route path='/inicio' element={<Inicio/>}/>
+
+          <Route path='/bovino' element={<Bovino/>}/>
           
 
           <Route element={<ProtectedRoutes/>}>
