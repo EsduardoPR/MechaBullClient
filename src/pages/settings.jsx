@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { useWebSocket } from '../components/services/userContext';
@@ -21,4 +21,14 @@ export function Settings(){
             <button onClick={logout}>Cerrar sesión</button>
         </div>
     )
+}*/
+
+import { SectionSettings } from '../components/organims/home/sectionSettings'
+import '../assets/styles/home/settings.css'
+
+export function Settings(){
+    return(
+       <SectionSettings/>
+    )
+
 }
