@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import '../../../assets/styles/home/header.css'
 import logo from '../../../assets/img/logo.svg';
@@ -8,7 +9,7 @@ import BullPlusOff from '../../../assets/img/BullPlusOff.png';
 import lupa from '../../../assets/img/lupa.png'
 
 import { IonIcon } from '@ionic/react';
-import { navigate, settingsSharp } from 'ionicons/icons';
+import { settingsSharp } from 'ionicons/icons';
 
 import { ModalS } from "../../atoms/home/modal";
 
@@ -16,10 +17,11 @@ import { ModalS } from "../../atoms/home/modal";
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet"></link>;
 
 export function HeaderSuperior({name}){
+    const navigation = useNavigate()
     const [isTrue, setIsTrue] = useState(true);
 
-    const returtSettings = () =>{
-        navigate('/')
+    const returtSetting = () =>{
+        navigation('/config')
     }
     return(
         <section className='header'>
@@ -27,7 +29,7 @@ export function HeaderSuperior({name}){
                     <img className='logo' src={logo} />
                     <h1 className='title'>{name}</h1>
                 </div>
-                <div className='headerConfig' onClick={returtSettings}>
+                <div className='headerConfig' >
                     <div className="content-search">
                         <img src={lupa} alt="Icono" className="input-icon"/>
                         <input className='header-search' type="text" placeholder="Buscar"/>
@@ -46,7 +48,7 @@ export function HeaderSuperior({name}){
                         <p className='name-buss'>BullPlus</p>
                     </div>
                     <ModalS/>
-                    <div className="header-config">
+                    <div className="header-config" onClick={returtSetting}>
                         <IonIcon
                             icon={settingsSharp}
                             className="config-icon"/>

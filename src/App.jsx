@@ -36,13 +36,12 @@ function App() {
           <Route path='/error-rec-pass' element={<ErrorFromRecoveryPasswd/>}/>
           <Route path='/new-contra' element={<CambiarContraseña/>}/>
           <Route path='/busqueda-contraseña' element={<BusquedaContraseña/>}/>
-          
 
           <Route element={<ProtectedRoutes/>}>
             <Route path='/inicio' element={<Inicio/>}/>
+            <Route path='/config' element={<Settings/>}/>
           </Route>
-          <Route path='/config' element={<Settings/>}/>
-
+          
           <Route path='/dash' element={
             <ProtectedRoutes 
               redirectTo='/inicio'>
