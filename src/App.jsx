@@ -15,6 +15,7 @@ import { BusquedaContraseña } from './pages/busquedaContraseña'
 import { Inicio } from './pages/Inicio'
 import { Dash } from './pages/dash';
 import { Settings } from './pages/settings';
+import { Bovino } from './pages/bovino';
 
 
 
@@ -41,6 +42,7 @@ function App() {
             <Route path='/inicio' element={<Inicio/>}/>
             <Route path='/config' element={<Settings/>}/>
           </Route>
+          <Route path='/info-bovino' element={<Bovino/>}/>
           
           <Route path='/dash' element={
             <ProtectedRoutes 
