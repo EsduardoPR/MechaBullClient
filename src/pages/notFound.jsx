@@ -5,7 +5,7 @@ import { Button } from '../components/molecules/auths/button'
 export function NotFound(){
     const navigate = useNavigate()
     const returt = () => {
-        navigate('/')
+        navigate('/inicio')
     }
     return(
         <section className='section-notfound'>

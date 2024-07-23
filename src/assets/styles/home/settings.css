@@ -2,24 +2,25 @@
 
 .section-configuracion{
     width: 100%;
-    height: 100vh;
-    margin: 0%;
+    height: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    
-    
+    flex-direction: column;
+    font-family: "Tajawal", sans-serif;
+    font-style: normal;
+    background-color: #f1f1f1;
 }
-
+.conten1{
+    margin-top: 100px;
+    width: 170vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px 30px;
+}
 .Perfil{
-    height: 350PX;
-    width: 400PX;
-    
-   margin-top: 50px;
-   margin-left: 30px;
-   margin-right: 30px;
+    height: 350px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,11 +29,10 @@
     padding-right: 20px;
 
 
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
 .Perfil p{
-    
     font-family: 'Tajawal', sans-serif;
 }
 
@@ -48,16 +48,13 @@
 }
 
 .editar-perfil{
-    height: 350PX;
-    width: 900PX;
-    margin-top: 50px;
-   margin-left: 30px;
-   margin-right: 30px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    width: 900px;
+    height: auto;
+    margin-left: 30px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-
-    padding-left: 20px;
-    padding-right: 20px;
+    background-color: white;
+    padding: 0 20px;
 }
 
 .container-input{
@@ -75,34 +72,98 @@
 .input-perfil{
     width: 100%;
     margin-right: 20px;
+    padding: 5px;
 }
 
-.input-perfil input{
+.input-perfil .setting-input{
     width: 100%;
     height: 40px;
     font-size: 17px;
-
-    border-color: #105DA5;
+    padding: 10px;
+    border: 1px solid #87b6e2;
     color: #105DA5;
-    border: solid 1px;
-    
+    border-radius: 5px;
+}
+.setting-input:focus{
+    outline: none;
+    border: 1.5px solid #105DA5;
+    transition: 1s;
+}
+.input-perfil .error{
+    transition: 1s;
+    border: 1.5px solid #f44336;  
+}
+.error.setting-input:focus{
+    border: 1.5px solid #f44336;
+}
+
+.editar-perfil .buttons-action-settings{
+    width: 100%;
+    height: 60px;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.buttons-action-settings .update-sesion{
+    background:#1785ec;
+    color: white;
+    width: 180px;
+    font-size: 15px;
+    padding: 12px;
+    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.10);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .6s;
+    margin-right: -100px;
+}
+.update-sesion:hover{
+    background:#4fa3f1;
+}
+.update-sesion:active{
+    background:#126bbe;
+}
+.buttons-action-settings .close-sesion{
+    background:#F44336;
+    color: white;
+    width: 150px;
+    font-size: 17px;
+    padding: 11px;
+    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.10);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .6s;
+    margin-left: -100px;
+}
+.close-sesion:hover{
+    background:rgb(241, 103, 93);
+}
+.close-sesion:active{
+    background:#e41e10;
 }
 
 
+.conten2{
+    width: 170vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding:10px 0;
+}
+
 .miembros{
-    height: 350PX;
-    width: 400PX;
-    
-   margin-top: 50px;
-   margin-left: 30px;
-   margin-right: 30px;
+    width: 28%;
+    height: 350px;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
     padding-right: 20px;
+    margin-left: 30px;
 
-
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
 .Scrol {
@@ -132,6 +193,7 @@
     padding: 10px;
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
+
   }
   
   .profile-picture {
@@ -158,3 +220,25 @@
     margin: 0;
   }
   
+
+
+.errorreq{
+    text-align: center;
+    width:75%;
+    opacity: 1;
+    max-height: 0;
+    overflow: hidden;
+    color: hsl(4, 90%, 58%);
+    margin-top: -5px;
+    margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+}
+.errors-passwd.visible,
+.errors-req.visible,
+.errors-input.visible {
+    max-height: 200px;
+    opacity: 1;
+}

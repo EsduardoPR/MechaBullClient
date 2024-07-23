@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate, Router } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react'
 
 //esqueleto
@@ -10,21 +10,19 @@ import { Register } from './pages/register';
 import { RecuperarContraseña } from './pages/recuperarContraseña'
 import { CambiarContraseña } from './pages/nuevaContraseña'
 import { BusquedaContraseña } from './pages/busquedaContraseña'
-
+import { ErrorFromRecoveryPasswd } from './pages/errorFromRecoveryPasswd';
 
 import { Inicio } from './pages/Inicio'
-import { Dash } from './pages/dash';
 import { Bovino } from './pages/bovino';
 import { Settings } from './pages/settings';
 
 
-
-
 import { WebSocketProvider } from './components/services/userContext';
-import './assets/styles/globales.css'
-import { ErrorFromRecoveryPasswd } from './pages/errorFromRecoveryPasswd';
+
+
 import { NotFound } from './pages/notFound';
 
+import './assets/styles/globales.css'
 
 function App() {
   return (
@@ -40,17 +38,17 @@ function App() {
 
           <Route element={<ProtectedRoutes/>}>
             <Route path='/inicio' element={<Inicio/>}/>
-
+            <Route path='/info-bovino/:id' element={<Bovino/>}/>
+            <Route path='/conf' element={<Settings/>}/>
           </Route>
-          <Route path='/info-bovino' element={<Bovino/>}/>
-          <Route path='/conf' element={<Settings/>}/>
           
-          <Route path='/dash' element={
+          
+          {/*<Route path='/dash' element={
             <ProtectedRoutes 
               redirectTo='/inicio'>
                 <Dash />
             </ProtectedRoutes>
-          } />
+          } />*/}
           <Route path='/*' element={<NotFound/>}/>
           <Route path='+' element={<Navigate to='/'/>}/>
         </Routes>

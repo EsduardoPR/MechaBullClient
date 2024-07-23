@@ -1,11 +1,14 @@
 import { IonIcon } from '@ionic/react';
 import { useRef, useState } from 'react';
+import Select from 'react-select'
 import { phonePortraitSharp, closeCircle } from 'ionicons/icons';
 
 import { Button } from './button';
 import BovinoOne from '../../../assets/img/bovino1.svg'
 
-export function CreateAndUpdateBovino({className, onClick, titleActionBovino, typeButtonAction, onClickAction, classNameButtonAction}){
+export function CreateAndUpdateBovino({
+        className, onClick, titleActionBovino, typeButtonAction, onClickAction, 
+        classNameButtonAction, contentModifyCowData}){
     const devices = [
         { id: 1, name: 'Dispositivo1' },
         { id: 2, name: 'Dispositivo2' },
@@ -27,6 +30,9 @@ export function CreateAndUpdateBovino({className, onClick, titleActionBovino, ty
             setModalIsOpen(false);
         }
     })
+
+
+
     return(
         <div className={className}>
             <div className={`create-bovino-front`}>
@@ -37,24 +43,7 @@ export function CreateAndUpdateBovino({className, onClick, titleActionBovino, ty
                     <div className='add-bovino'>
                         <h4>{titleActionBovino}</h4>
                         <img src={BovinoOne}/>
-                        <div className='div-input-bovino'>
-                            <div className='div-title'>
-                                <p>Nombre del bovino</p>
-                            </div>
-                            <input type="text" name="" placeholder='messirve'/>
-                        </div>
-                        <div className='div-input-bovino'>
-                            <div className='div-title'>
-                                <p>Siniga</p>
-                            </div>
-                            <input type="text" name="" placeholder='12-EE'/>
-                        </div>
-                        <div className='div-input-bovino'>
-                            <div className='div-title'>
-                                <p>Fecha de nacimiento</p>
-                            </div>
-                            <input type="date" name=""/>
-                        </div>
+                        {contentModifyCowData}
                     </div>
 
                     <div className='vinculation-with-dispositivo'>
@@ -65,18 +54,6 @@ export function CreateAndUpdateBovino({className, onClick, titleActionBovino, ty
                                 <p>Dispositivo actualmente</p>
                             </div>
                             <input type="text" name="" placeholder='Dispositivo 3'/>
-                        </div>
-                        <div className='content-devices'>
-                            <p  ref={iconRef} onClick={() => setModalIsOpen(!modalIsOpen)}>Dispositivos disponibles para vinculacion</p>
-                            { modalIsOpen && (
-                                <div className='list' ref={modalRef}>
-                                    <ul>
-                                        {devices.map((device, index) =>(
-                                            <li key={index}>{device.name}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
                         </div>
                     </div>
                 </div>

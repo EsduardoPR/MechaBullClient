@@ -1,4 +1,4 @@
-import { setSession } from "./dataService";
+/*import { setSession } from "./dataService";
 
 export function ConnectionWS() {
     const token = sessionStorage.getItem('token');
@@ -30,6 +30,6 @@ export function ConnectionWS() {
         console.log('WebSocket connection closed');
         // console.log("Reconectando...");
     };
-}
+}*/
 
 

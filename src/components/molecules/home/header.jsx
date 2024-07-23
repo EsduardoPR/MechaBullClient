@@ -16,18 +16,21 @@ import { ModalS } from "../../atoms/home/modal";
 <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet"></link>;
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet"></link>;
 
-export function HeaderSuperior({name}){
+export function Header(){
     const navigation = useNavigate()
     const [isTrue, setIsTrue] = useState(true);
+    
+    const returtHome = () =>{
+        navigation('/')
+    }
 
     const returtSetting = () =>{
-        navigation('/config')
+        navigation('/conf')
     }
     return(
         <section className='header'>
-                <div className='header-title'>
+                <div className='header-title' onClick={returtHome}>
                     <img className='logo' src={logo} />
-                    <h1 className='title'>{name}</h1>
                 </div>
                 <div className='headerConfig' >
                     <div className="content-search">

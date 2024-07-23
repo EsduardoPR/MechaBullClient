@@ -35,19 +35,24 @@ export const WebSocketProvider = ({ children }) => {
             console.log('Connection WebSocket Client Verify');
         }
             
-        //socket.onmessage = (event) => handleWebSocketMessage(socket, event);
-        socket.onmessage = (message) => {
-        const data = JSON.parse(message.data);
-            if(data.event === 'token-expired'){
+
+        socket.onmessage = (event) => {
+            const message = JSON.parse(event.data);
+            handleWebSocketMessage(event); 
+            
+            // Lógica adicional basada en el mensaje recibido
+            if (message.event === 'token-expired') {
                 setAlertMessage('Sesión expirada, por favor inicia sesión!.');
-                socket.close()
+                socket.close();
+                window.localStorage.removeItem('token');
             }
         };
     
         socket.onclose = (code, reason) => {
             console.log("Websocket Close")
-            window.localStorage.removeItem('token');
+            
             if (code.code === 4000 && code.reason === 'clientClose') {
+                window.localStorage.removeItem('token');
                 console.log("el usuario cerro la sesion")
                 setAlertMessage('')
             }
